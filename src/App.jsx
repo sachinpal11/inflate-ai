@@ -7,6 +7,7 @@ import Lenis from "lenis";
 import ActionCall from "./components/ActionCall";
 import Navbar from "./components/Navbar";
 import ParagraphHead from "./components/ParagraphHead";
+import ComparisonTable from "./components/CompareTable";
 function App() {
   // Initialize Lenis
   const lenis = new Lenis();
@@ -26,6 +27,7 @@ function App() {
       <HeroSection />
       <Slider />
       <ParagraphHead title={"Benefits that Drive Success"} isBtn={true} />
+      <ComparisonTable />
     </div>
   );
 }

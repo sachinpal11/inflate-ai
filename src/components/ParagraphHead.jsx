@@ -8,7 +8,7 @@ function ParagraphHead({ title, isBtn }) {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, ease: "easeOut" }}
       viewport={{ once: true, amount: 0.5 }}
-      className="w-[75%] text-5xl font-medium  flex items-center h-[10vh] justify-between my-[15vh] "
+      className="md:w-[75%] sm:w-[90%] w-[80%] md:text-4xl sm:flex-row flex-col sm:justify-between text-2xl xl:text-5xl font-medium flex items-start gap-3 sm:items-center my-[15vh] "
     >
       <span className="tracking-tighter text-neutral-800">{title}</span>
       {isBtn && <CallBtn width={false} />}
