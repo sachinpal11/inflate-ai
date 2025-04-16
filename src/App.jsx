@@ -5,6 +5,7 @@ import TextGradient from "./components/TextGradient";
 import Slider from "./components/Slider";
 import Lenis from "lenis";
 import ActionCall from "./components/ActionCall";
+import Navbar from "./components/Navbar";
 function App() {
   // Initialize Lenis
   const lenis = new Lenis();
@@ -17,7 +18,8 @@ function App() {
 
   requestAnimationFrame(raf);
   return (
-    <div className="font-[poppins] flex-col w-full h-auto flex">
+    <div className="font-[poppins] bg-neutral-50 flex-col w-full h-auto flex">
+      <Navbar />
       <NavHead />
       <ActionCall />
       <HeroSection />
