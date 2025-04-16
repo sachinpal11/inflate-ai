@@ -26,7 +26,7 @@ function HeroSection() {
             Helping businesses implement Voice AI
           </span>
         </div>
-        <div className="md:text-8xl text-6xl scale-90 text-neutral-900 items-center flex-col flex font-medium md:w-full">
+        <div className="md:text-8xl mb-8 text-6xl scale-90 text-neutral-900 items-center flex-col flex font-medium md:w-full">
           <span className="flex tracking-tighter sm:flex-row flex-col items-center sm:gap-4">
             Handle
             <TextGradient text={"Real Calls"} color={"green"} size={"8xl"} />

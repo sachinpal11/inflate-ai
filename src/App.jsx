@@ -6,6 +6,7 @@ import Slider from "./components/Slider";
 import Lenis from "lenis";
 import ActionCall from "./components/ActionCall";
 import Navbar from "./components/Navbar";
+import ParagraphHead from "./components/ParagraphHead";
 function App() {
   // Initialize Lenis
   const lenis = new Lenis();
@@ -18,12 +19,13 @@ function App() {
 
   requestAnimationFrame(raf);
   return (
-    <div className="font-[poppins] bg-neutral-50 flex-col w-full h-auto flex">
+    <div className="font-[poppins] bg-neutral-50 flex-col w-full h-auto flex items-center">
       <Navbar />
       <NavHead />
-      {/* <ActionCall /> */}
+      <ActionCall />
       <HeroSection />
       <Slider />
+      <ParagraphHead title={"Benefits that Drive Success"} isBtn={true} />
     </div>
   );
 }
