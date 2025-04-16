@@ -1,16 +1,45 @@
-import React from "react";
+import React, { useState } from "react";
 import GreenDot from "./GreenDot";
 import { motion } from "motion/react";
+
 function Navbar() {
+  const [hovered, setHovered] = useState(null);
+
+  const getWidthClass = (index) => {
+    if (hovered === null) return "sm:w-[33%]";
+    return hovered === index ? "sm:w-[40%]" : "sm:w-[30%]";
+  };
+
   return (
-    <div className="text-xl text-neutral-500 justify-between w-[48%] bg-neutral-200 shadow-lg rounded-full flex h-22 capitalize overflow-hidden fixed z-20 bottom-10 left-1/2 -translate-x-1/2">
-      <motion.span className="w-[33%] bg-white flex items-center justify-center h-full">
+    <div className="text-xl text-neutral-500 justify-between w-[90%] sm:w-[80%] md:w-[60%] lg:w-[48%] bg-neutral-200 shadow-lg rounded-full sm:flex flex-col hidden  sm:flex-row h-auto sm:h-22 capitalize overflow-hidden fixed z-20 bottom-6 left-1/2 -translate-x-1/2">
+      <motion.span
+        onMouseEnter={() => setHovered(0)}
+        onMouseLeave={() => setHovered(null)}
+        transition={{ type: "spring", stiffness: 300 }}
+        className={`w-full ${getWidthClass(
+          0
+        )} bg-white hover:bg-transparent transition-all duration-300 flex items-center justify-center h-14 sm:h-full`}
+      >
         AI Voice Agents
       </motion.span>
-      <motion.span className="w-[33%] bg-white flex items-center justify-center h-full">
+      <motion.span
+        onMouseEnter={() => setHovered(1)}
+        onMouseLeave={() => setHovered(null)}
+        transition={{ type: "spring", stiffness: 300 }}
+        className={`w-full ${getWidthClass(
+          1
+        )} bg-white hover:bg-transparent transition-all duration-300 flex items-center justify-center h-14 sm:h-full`}
+      >
         Support Services
       </motion.span>
-      <motion.span className="w-[33.6%] gap-3 bg-white flex items-center justify-center h-full">
+      <motion.span
+        onMouseEnter={() => setHovered(2)}
+        onMouseLeave={() => setHovered(null)}
+        transition={{ type: "spring", stiffness: 300 }}
+        className={`w-full ${getWidthClass(
+          2
+        )} bg-white hover:bg-transparent transition-all duration-300 flex items-center justify-center h-14 sm:h-full gap-2 sm:gap-3`}
+      >
         <GreenDot /> Contact Us
       </motion.span>
     </div>

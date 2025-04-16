@@ -21,7 +21,7 @@ function App() {
     <div className="font-[poppins] bg-neutral-50 flex-col w-full h-auto flex">
       <Navbar />
       <NavHead />
-      <ActionCall />
+      {/* <ActionCall /> */}
       <HeroSection />
       <Slider />
     </div>
