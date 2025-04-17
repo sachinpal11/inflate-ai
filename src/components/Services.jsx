@@ -1,6 +1,7 @@
 import React from "react";
 import PBox from "./PBox";
 import ServiceImg from "./ServiceImg";
+import ServiceMiniBox from "./ServiceMiniBox";
 
 function Services() {
   return (
@@ -46,6 +47,7 @@ function Services() {
             }
           />
         </div>
+        <ServiceMiniBox />
       </div>
     </PBox>
   );

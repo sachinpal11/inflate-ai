@@ -16,10 +16,13 @@ function ServiceImg({
       {...props}
       onMouseEnter={(e) => setHover(true)}
       onMouseLeave={(e) => setHover(false)}
-      className={`relative overflow-hidden rounded-4xl bg-blue-700 ${className}`}
+      className={`relative overflow-hidden rounded-4xl ${className}`}
     >
-      <img
+      <motion.img
+        initial={{ scale: 1.1 }}
+        animate={isHover ? { scale: 1.2 } : { scale: 1.1 }}
         src={src}
+        transition={{ duration: 0.2 }}
         className="w-full h-full object-cover "
         alt=""
         loading="lazy"
