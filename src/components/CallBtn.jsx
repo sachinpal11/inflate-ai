@@ -8,7 +8,7 @@ function CallBtn({ width = true, text }) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.1 }}
       // href="tel:+14155552671"
-      className="bg-gradient-to-t text-nowrap cursor-pointer from-neutral-900 to-neutral-800  flex items-center gap-2 text-lg font-medium text-white py-5 px-7 rounded-full shadow-lg transition-all duration-300 hover:px-9 sm:w-fit w-[90%] justify-center"
+      className="bg-gradient-to-t text-nowrap cursor-pointer from-neutral-900 to-neutral-800 text-sm sm:text-lg flex items-center gap-2  font-medium text-white py-5 px-7 rounded-full shadow-lg transition-all duration-300 hover:px-9 sm:w-fit w-[90%] justify-center"
     >
       <Phone className="scale-75" /> {text}
     </motion.a>
@@ -18,7 +18,7 @@ function CallBtn({ width = true, text }) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.1 }}
       // href="tel:+14155552671"
-      className="bg-gradient-to-t cursor-pointer from-neutral-900 to-neutral-800  flex items-center gap-2 text-lg font-medium text-white py-5 px-7 rounded-full text-nowrap shadow-lg hover:bg-green-600 transition duration-300"
+      className="bg-gradient-to-t cursor-pointer from-neutral-900 to-neutral-800  flex items-center gap-2 text-sm sm:text-lg font-medium text-white py-5 px-7 rounded-full text-nowrap shadow-lg hover:bg-green-600 transition duration-300"
     >
       <Phone className="scale-75" /> {text}
     </motion.a>

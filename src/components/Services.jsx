@@ -35,7 +35,7 @@ function Services() {
             text={"Fully automate reminders, follow-ups & more."}
           />
         </div>
-        <div className="h-auto -mt-6 flex xl:h-[70vh]">
+        <div className="h-auto mb-5 -mt-6 flex xl:h-[70vh]">
           <ServiceImg
             className={"h-[70vh] w-full"}
             src={
@@ -47,7 +47,20 @@ function Services() {
             }
           />
         </div>
-        <ServiceMiniBox />
+        <ServiceMiniBox
+          title={"What are AI Voice Agents?"}
+          description={
+            "AI voice agents are computer programs that can talk and listen like a human using artificial intelligence. They understand spoken words, process the information, and respond in a natural way. You can find them in virtual assistants like Siri or Alexa, customer service bots, and even call centers. These voice agents help automate tasks, answer questions, and make communication easier."
+          }
+          BtnText={"Try Our Demo"}
+        />
+        <ServiceMiniBox
+          title={"Unsure how AI Voice Agents could be used in your business?"}
+          description={
+            "If you're unsure how AI Voice Agents could be integrated into your business, feel free to book a project consultation."
+          }
+          BtnText={"Book Project Consultation"}
+        />
       </div>
     </PBox>
   );
