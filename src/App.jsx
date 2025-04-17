@@ -8,6 +8,8 @@ import ActionCall from "./components/ActionCall";
 import Navbar from "./components/Navbar";
 import ParagraphHead from "./components/ParagraphHead";
 import ComparisonTable from "./components/CompareTable";
+import Services from "./components/Services";
+import PBox from "./components/PBox";
 function App() {
   // Initialize Lenis
   const lenis = new Lenis();
@@ -26,8 +28,14 @@ function App() {
       <ActionCall />
       <HeroSection />
       <Slider />
-      <ParagraphHead title={"Benefits that Drive Success"} isBtn={true} />
+      <ParagraphHead
+        title={"Benefits that Drive Success"}
+        isBtn={true}
+        BtnText={"Book A Call"}
+      />
       <ComparisonTable />
+      <ParagraphHead title={"Tailored for your business."} isBtn={false} />
+      <Services />
     </div>
   );
 }

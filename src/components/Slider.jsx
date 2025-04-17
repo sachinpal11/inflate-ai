@@ -15,7 +15,7 @@ function Slider() {
   const loopedData = [...data, ...data];
 
   return (
-    <div className="w-full mt-[5vh] flex flex-col gap-4 overflow-hidden py-6">
+    <div className="w-full mt-[2.5rem] flex flex-col gap-4 overflow-hidden py-6">
       <motion.div
         className="flex gap-4"
         animate={{ x: ["0%", "-50%"] }}

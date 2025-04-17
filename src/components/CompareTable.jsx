@@ -1,6 +1,6 @@
 import React from "react";
 import { Check, X } from "lucide-react"; // icons for check & cross
-import { motion } from "motion/react";
+import PBox from "./PBox";
 
 const inflateList = [
   "Experienced AI Voice Developers",
@@ -22,13 +22,7 @@ const othersList = [
 
 function ComparisonTable() {
   return (
-    <motion.div
-      initial={{ opacity: 0, y: 40 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.5, ease: "easeOut" }}
-      viewport={{ once: true, amount: 0.5 }}
-      className="max-w-6xl mx-auto w-[90%] md:w-[80%] flex justify-evenly -mt-10 bg-white rounded-3xl shadow p-4 sm:p-10"
-    >
+    <PBox>
       <div className="grid gap-15 w-full grid-cols-1 md:grid-cols-2 p-5">
         {/* Inflate Column */}
         <div className="justify-self-start">
@@ -45,8 +39,8 @@ function ComparisonTable() {
                 key={idx}
                 className="flex items-start gap-3 text-base font-medium text-neutral-800"
               >
-                <span className="mt-1">
-                  <Check className="text-neutral-400 w-5 h-5" />
+                <span className="mt-1 p-1 border-1 rounded-sm border-neutral-200">
+                  <Check className="text-neutral-500  w-3 h-3" />
                 </span>
                 {item}
               </li>
@@ -55,7 +49,7 @@ function ComparisonTable() {
         </div>
 
         {/* Other Agencies Column */}
-        <div className="justify-self-end">
+        <div className="">
           <h2 className="text-xl font-medium mb-6">
             Other Development Agencies
           </h2>
@@ -65,8 +59,8 @@ function ComparisonTable() {
                 key={idx}
                 className="flex items-start gap-3 text-base text-neutral-800"
               >
-                <span className="mt-1">
-                  <X className="text-neutral-400 w-5 h-5" />
+                <span className="mt-1 p-1 border-1 rounded-sm border-neutral-200">
+                  <X className="text-neutral-500  w-3 h-3" />
                 </span>
                 {item}
               </li>
@@ -74,7 +68,7 @@ function ComparisonTable() {
           </ul>
         </div>
       </div>
-    </motion.div>
+    </PBox>
   );
 }
 

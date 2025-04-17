@@ -15,7 +15,7 @@ function Navbar() {
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.5 }}
-      className="text-xl text-neutral-500 justify-between w-[90%] sm:w-[90%] md:w-[80%] lg:w-[65%] xl:w-[50%] bg-neutral-200 shadow-lg rounded-full sm:flex flex-col hidden  sm:flex-row h-auto sm:h-22 capitalize overflow-hidden fixed z-20 bottom-6 left-1/2 -translate-x-1/2"
+      className="text-xl text-neutral-500 cursor-pointer justify-between w-[90%] sm:w-[90%] md:w-[80%] lg:w-[65%] xl:w-[50%] bg-neutral-200 shadow-lg rounded-full sm:flex flex-col hidden  sm:flex-row h-auto sm:h-22 capitalize overflow-hidden fixed z-20 bottom-6 left-1/2 -translate-x-1/2"
     >
       <motion.span
         onMouseEnter={() => setHovered(0)}
