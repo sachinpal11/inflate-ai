@@ -2,6 +2,7 @@ import React from "react";
 import PBox from "./PBox";
 import ServiceImg from "./ServiceImg";
 import ServiceMiniBox from "./ServiceMiniBox";
+import { HeadPoint } from "./ServicePrice";
 
 function Services() {
   return (
@@ -11,9 +12,7 @@ function Services() {
           <p className="sm:text-4xl text-2xl text-neutral-800 font-medium">
             Our Services
           </p>
-          <span className="px-3 text-nowrap text-sm sm:text-md py-2 rounded-full bg-green-200 text-green-800 font-medium">
-            3 services
-          </span>
+          <HeadPoint varient={"green"}>3 services</HeadPoint>
         </div>
         <div className="flex w-full xl:flex-row flex-col h-auto xl:h-[70vh] gap-4 my-10">
           <ServiceImg
@@ -47,20 +46,22 @@ function Services() {
             }
           />
         </div>
-        <ServiceMiniBox
-          title={"What are AI Voice Agents?"}
-          description={
-            "AI voice agents are computer programs that can talk and listen like a human using artificial intelligence. They understand spoken words, process the information, and respond in a natural way. You can find them in virtual assistants like Siri or Alexa, customer service bots, and even call centers. These voice agents help automate tasks, answer questions, and make communication easier."
-          }
-          BtnText={"Try Our Demo"}
-        />
-        <ServiceMiniBox
-          title={"Unsure how AI Voice Agents could be used in your business?"}
-          description={
-            "If you're unsure how AI Voice Agents could be integrated into your business, feel free to book a project consultation."
-          }
-          BtnText={"Book Project Consultation"}
-        />
+        <div className="w-full flex flex-col gap-3">
+          <ServiceMiniBox
+            title={"What are AI Voice Agents?"}
+            description={
+              "AI voice agents are computer programs that can talk and listen like a human using artificial intelligence. They understand spoken words, process the information, and respond in a natural way. You can find them in virtual assistants like Siri or Alexa, customer service bots, and even call centers. These voice agents help automate tasks, answer questions, and make communication easier."
+            }
+            BtnText={"Try Our Demo"}
+          />
+          <ServiceMiniBox
+            title={"Unsure how AI Voice Agents could be used in your business?"}
+            description={
+              "If you're unsure how AI Voice Agents could be integrated into your business, feel free to book a project consultation."
+            }
+            BtnText={"Book Project Consultation"}
+          />
+        </div>
       </div>
     </PBox>
   );

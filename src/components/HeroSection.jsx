@@ -3,6 +3,7 @@ import { motion } from "motion/react";
 import TextGradient from "./TextGradient";
 import GreenDot from "./GreenDot";
 import CallBtn from "./CallBtn";
+import { Phone } from "lucide-react";
 function HeroSection() {
   return (
     <motion.div className="flex flex-col h-[80vh] justify-between  items-center mt-8 gap-10">
@@ -35,7 +36,9 @@ function HeroSection() {
             with AI Voice Agents.
           </span>
         </div>
-        <CallBtn text={"Book A Call"} />
+        <CallBtn>
+          <Phone /> Book A Call
+        </CallBtn>
       </motion.div>
     </motion.div>
   );

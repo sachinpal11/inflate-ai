@@ -10,6 +10,7 @@ import ParagraphHead from "./components/ParagraphHead";
 import ComparisonTable from "./components/CompareTable";
 import Services from "./components/Services";
 import PBox from "./components/PBox";
+import OurService from "./components/OurService";
 function App() {
   // Initialize Lenis
   const lenis = new Lenis();
@@ -36,6 +37,7 @@ function App() {
       <ComparisonTable />
       <ParagraphHead title={"Tailored for your business."} isBtn={false} />
       <Services />
+      <OurService />
     </div>
   );
 }
