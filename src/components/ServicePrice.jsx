@@ -9,7 +9,7 @@ const useVariant = () => useContext(VariantContext);
 
 export default function ServicePrice() {
   return (
-    <div className="w-full flex flex-col sm:flex-row gap-4">
+    <div className="w-full flex flex-col xl:flex-row gap-4">
       <PriceBox type={"1/2"} variant="light">
         <PriceMiniBox>
           <Pricehead>
@@ -58,8 +58,8 @@ export default function ServicePrice() {
   );
 }
 
-export function PriceBox({ type, children, variant = "light" }) {
-  const base = `p-3 md:w-${type} w-full flex flex-col gap-4 border rounded-3xl border-1 text-2xl font-medium`;
+export function PriceBox({ type = "full", children, variant = "light" }) {
+  const base = `p-3 xl:w-${type} w-full flex flex-col gap-4 border rounded-3xl border-1 text-2xl font-medium`;
   const variants = {
     light: "bg-neutral-100 border-neutral-100 text-black border-neutral-200",
     dark: "bg-neutral-900 border-neutral-900 text-white border-neutral-400",
@@ -71,7 +71,7 @@ export function PriceBox({ type, children, variant = "light" }) {
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
-        viewport={{ once: true, amount: 0.1 }}
+        viewport={{ once: false, amount: 0.1 }}
         className={`${base} ${variants[variant]}`}
       >
         {children}
