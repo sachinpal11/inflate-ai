@@ -8,6 +8,14 @@ const VariantContext = createContext("light");
 const useVariant = () => useContext(VariantContext);
 
 export default function ServicePrice() {
+  const features = [
+    "Advanced Automations",
+    "Human Like Quality",
+    "24/7 Priority Support",
+    "Weekly Development Calls",
+    "Rigorous Testing",
+    "Latest AI Models",
+  ];
   return (
     <div className="w-full flex flex-col xl:flex-row gap-4">
       <PriceBox type={"1/2"} variant="light">
@@ -31,6 +39,7 @@ export default function ServicePrice() {
             <Rocket /> Get Started
           </CallBtn>
         </PriceMiniBox>
+        <PriceArray features={features} />
       </PriceBox>
       <PriceBox type={"1/2"} variant="dark">
         <PriceMiniBox>
@@ -53,6 +62,7 @@ export default function ServicePrice() {
             <Rocket /> Get Started
           </CallBtn>
         </PriceMiniBox>
+        <PriceArray features={features} />
       </PriceBox>
     </div>
   );
@@ -114,4 +124,24 @@ export function HeadPoint({ children, varient }) {
 
 export function Dark({ children }) {
   return <span className="text-neutral-500">{children}</span>;
+}
+
+export function PriceArray({ features }) {
+  const variant = useVariant();
+  const varients = {
+    light: "text-gray-800",
+    dark: "text-neutral-400",
+  };
+  return (
+    <div className="grid grid-cols-1 px-4 py-3 sm:grid-cols-2 gap-4">
+      {features.map((feature, index) => (
+        <div key={index} className="flex items-start space-x-2">
+          <div className="w-2 h-2 bg-gray-400 rounded-full mt-2"></div>
+          <p className={`text-xl font-semibold ${varients[variant]}`}>
+            {feature}
+          </p>
+        </div>
+      ))}
+    </div>
+  );
 }

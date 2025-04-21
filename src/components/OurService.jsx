@@ -13,9 +13,9 @@ function OurService() {
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.5, ease: "easeOut" }}
         viewport={{ once: true, amount: 0.5 }}
-        className="sm:w-[75%] w-[165] font-medium flex mt-20 mb-10 items-center gap-3 scale-50 md:scale-100  text-start text-6xl"
+        className="w-[90%] sm:w-[80%] font-medium flex mt-20 mb-10 items-center gap-3 text-start md:text-6xl text-3xl"
       >
-        Our <TextGradient text={"Services"} size={"3xl"} />
+        Our <TextGradient text={"Services"} size={"3xl"} type={"services"} />
       </motion.span>
       <div className="w-[80%] mb-10">
         <ServicePrice />
