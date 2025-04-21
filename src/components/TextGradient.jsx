@@ -15,7 +15,7 @@ const COLOR_MAP = {
   },
 };
 
-function TextGradient({ text, color = "green", size, type }) {
+function TextGradient({ text, color = "green", size = "6xl", type }) {
   const colors = COLOR_MAP[color] || COLOR_MAP.green;
 
   return (
@@ -23,8 +23,8 @@ function TextGradient({ text, color = "green", size, type }) {
       className={`px-4 capitalize border-l-4 bg-gradient-to-r to-transparent ${colors.border} ${colors.from}`}
     >
       <span
-        className={`font-medium text-nowrap text-neutral-900 md:text-${size} ${
-          type === "services" ? "text-3xl" : "text-6xl"
+        className={`font-medium text-nowrap flex text-neutral-900 md:text-${size} ${
+          type === "services" ? "text-3xl md:text-6xl" : "text-6xl"
         }`}
       >
         {text}
